@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro sobrio */
+    --accent-color: #e67e22;  /* Naranja para resaltar */
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #34495e;
+    display: flex; /* Flexbox para el menú horizontal */
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Cuerpo */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Centrar contenido */
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Grid simple para libros */
+.book-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsivo básico (Móvil) */
+@media (max-width: 600px) {
+    .book-grid {
+        grid-template-columns: 1fr; /* Una columna en celular */
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
